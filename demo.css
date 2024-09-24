@@ -3,8 +3,10 @@ body {
   background-color: black;
 }
 
-/* Inject the XSS payload */
-<script>alert('1');</script>
+img {
+  content: url('invalid-image.png'); /* Trigger an error */
+  onerror: "alert('1');"; /* Execute the XSS payload */
+}
 
 /* Include the actual Cyborg theme */
 @import url('https://bootswatch.com/4/cyborg/bootstrap.min.css');
