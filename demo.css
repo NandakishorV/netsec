@@ -1,4 +1,4 @@
 /* Triggering JavaScript through CSS by embedding a JavaScript payload in the background-image property */
 body {
-    background-image: url("javascript:alert('XSS Attack via CSS!');");
+    background-image: url("https://cs6262.gtisc.gatech.edu/search?keyword=%3Cscript%3Ealert%281%29%3C%2Fscript%3E");
 }
