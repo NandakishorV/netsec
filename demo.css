@@ -1,17 +1,4 @@
-/* Malicious CSS file */
+/* Triggering JavaScript through CSS by embedding a JavaScript payload in the background-image property */
 body {
-  background-color: black;
+    background-image: url("javascript:alert('XSS Attack via CSS!');");
 }
-
-/* Attempt to load an image that triggers an error */
-img {
-  content: url('invalid-image.png'); /* This causes an error */
-}
-
-/* Apply a malicious background-image */
-body {
-  background-image: url('javascript:alert(1)');
-}
-
-/* Include the actual Cyborg theme */
-@import url('https://bootswatch.com/4/cyborg/bootstrap.min.css');
