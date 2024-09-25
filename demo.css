@@ -1,11 +1,16 @@
-/* Malicious CSS file based on Cyborg theme */
+/* Malicious CSS file */
 body {
   background-color: black;
 }
 
+/* Attempt to load an image that triggers an error */
 img {
-  content: url('invalid-image.png'); /* Trigger an error */
-  onerror: "alert('1');"; /* Execute the XSS payload */
+  content: url('invalid-image.png'); /* This causes an error */
+}
+
+/* Apply a malicious background-image */
+body {
+  background-image: url('javascript:alert(1)');
 }
 
 /* Include the actual Cyborg theme */
